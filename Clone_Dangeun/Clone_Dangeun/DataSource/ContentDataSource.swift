@@ -32,15 +32,11 @@ class ContentsDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell") ?? UITableViewCell(style: .subtitle,
-                                                                                                   reuseIdentifier: "defaultCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: TradeContentsCell.identifier, for: indexPath) as! TradeContentsCell
         let item = tradeItems[indexPath.row]
-        cell.textLabel?.text = item.title
-        cell.detailTextLabel?.text = item.city
-        
+        cell.setCellItem(item)
         return cell
-    }
-    
+    }    
 }
 
 

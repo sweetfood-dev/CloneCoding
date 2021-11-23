@@ -12,7 +12,11 @@ class ViewController: UIViewController {
     let dataSource = ContentsDataSource()
     lazy var tableView: UITableView = {
         let tv = UITableView()
+        tv.register(TradeContentsCell.self, forCellReuseIdentifier: TradeContentsCell.identifier)
         tv.dataSource = dataSource
+        tv.delegate = self
+        tv.rowHeight = UITableView.automaticDimension
+        tv.estimatedRowHeight = UITableView.automaticDimension
         return tv
     }()
     override func viewDidLoad() {
@@ -76,5 +80,12 @@ class ViewController: UIViewController {
     
     @objc func touchHandler(sender: UIButton) {
         print("touch event")
+    }
+}
+
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
