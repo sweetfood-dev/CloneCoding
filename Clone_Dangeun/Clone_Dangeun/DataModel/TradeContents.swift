@@ -18,4 +18,7 @@ struct TradeContents {
     var city: String
     var price: String
     var itemImage: UIImage?
+    var replyCount: Int = 0
+    var chatCount: Int = 0
+    var likeCount: Int = 0
 }
