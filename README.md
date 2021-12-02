@@ -13,3 +13,6 @@ iOS Study 클론 코딩
 
 ### [ETC UI]
 [Bottom Sheet Drawer - Custom Action Sheet - Drag Gesture](https://www.youtube.com/watch?v=CyMtjSspJZA)
+
+### [View]
+[iOS Layout Cycle](https://medium.com/mj-studio/번역-ios-레이아웃의-미스터리를-파헤치다-2cfa99e942f9)
